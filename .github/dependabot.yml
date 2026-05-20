@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      fastify:
+        patterns:
+          - "@fastify/*"
+          - "fastify"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "react-router-dom"
+          - "@types/react*"
+      tooling:
+        patterns:
+          - "eslint*"
+          - "typescript-eslint"
+          - "typescript"
+          - "vite"
+          - "vitest"
+          - "tsx"
+          - "tsup"
+          - "@vitejs/*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

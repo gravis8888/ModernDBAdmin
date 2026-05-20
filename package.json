@@ -1,0 +1,37 @@
+{
+  "name": "modern-db-admin",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "reset:setup": "node scripts/reset-setup.mjs",
+    "docker:init": "node scripts/init-env.mjs",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f",
+    "docker:dev:up": "docker compose -f docker-compose.dev.yml up -d",
+    "docker:dev:down": "docker compose -f docker-compose.dev.yml down",
+    "docker:dev:logs": "docker compose -f docker-compose.dev.yml logs -f",
+    "build": "node scripts/run-workspace.mjs build",
+    "lint": "node scripts/run-workspace.mjs lint && eslint .",
+    "test": "node scripts/run-workspace.mjs test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^9.2.1",
+    "eslint": "^10.4.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.3",
+    "typescript-eslint": "^8.59.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "dompurify": "3.4.5",
+      "esbuild": "0.25.12"
+    }
+  }
+}

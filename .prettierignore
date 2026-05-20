@@ -1,0 +1,7 @@
+.lazyweb
+.serena
+node_modules
+dist
+apps/**/dist
+modern-db-admin-spec.md
+pnpm-lock.yaml

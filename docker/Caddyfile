@@ -1,0 +1,16 @@
+{
+    email {$MODERN_DB_ADMIN_ACME_EMAIL}
+}
+
+{$MODERN_DB_ADMIN_DOMAIN} {
+    encode zstd gzip
+
+    @api path /api/*
+    handle @api {
+        reverse_proxy backend:3001
+    }
+
+    root * /srv
+    try_files {path} /index.html
+    file_server
+}

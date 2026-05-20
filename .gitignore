@@ -1,0 +1,14 @@
+node_modules
+dist
+.vite
+.turbo
+coverage
+pnpm-lock.yaml
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+.env.local
+apps/backend/data
+.lazyweb
+.serena

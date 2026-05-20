@@ -1,0 +1,104 @@
+[dev] shared build を起動します
+
+> @modern-db-admin/shared@0.1.0 build C:\Users\tomar\Documents\GitHub\ModernDBAdmin\packages\shared
+> tsup src/index.ts --format esm,cjs --dts --clean
+
+[34mCLI[39m Building entry: src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.5.1
+[34mCLI[39m Target: es2022
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[34mCJS[39m Build start
+[32mCJS[39m [1mdist\index.cjs [22m[32m11.13 KB[39m
+[32mCJS[39m ⚡️ Build success in 45ms
+[32mESM[39m [1mdist\index.js [22m[32m7.45 KB[39m
+[32mESM[39m ⚡️ Build success in 46ms
+[34mDTS[39m Build start
+[32mDTS[39m ⚡️ Build success in 891ms
+[32mDTS[39m [1mdist\index.d.ts  [22m[32m17.88 KB[39m
+[32mDTS[39m [1mdist\index.d.cts [22m[32m17.88 KB[39m
+[dev] backend を起動します
+
+> @modern-db-admin/backend@0.1.0 dev C:\Users\tomar\Documents\GitHub\ModernDBAdmin\apps\backend
+> tsx watch src/server.ts
+
+[2026-05-20 11:37:02.068 +0900] [32mINFO[39m (15096): [36mServer listening at http://127.0.0.1:3001[39m
+[2026-05-20 11:37:02.068 +0900] [32mINFO[39m (15096): [36mServer listening at http://172.26.16.1:3001[39m
+[2026-05-20 11:37:02.068 +0900] [32mINFO[39m (15096): [36mServer listening at http://192.168.0.8:3001[39m
+[2026-05-20 11:37:03.142 +0900] [32mINFO[39m (15096): [36mincoming request[39m
+    [35mreqId[39m: "req-1"
+    [35mreq[39m: {
+      "method": "GET",
+      "url": "/api/health",
+      "host": "127.0.0.1:3001",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 14441
+    }
+[2026-05-20 11:37:03.148 +0900] [32mINFO[39m (15096): [36mrequest completed[39m
+    [35mreqId[39m: "req-1"
+    [35mres[39m: {
+      "statusCode": 200
+    }
+    [35mresponseTime[39m: 6.316400051116943
+[dev] バックエンドの準備ができました
+[dev] frontend を起動します
+
+> @modern-db-admin/frontend@0.1.0 dev C:\Users\tomar\Documents\GitHub\ModernDBAdmin\apps\frontend
+> vite
+
+
+  [32m[1mVITE[22m v8.0.13[39m  [2mready in [0m[1m479[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2026-05-20 11:37:10.570 +0900] [32mINFO[39m (15096): [36mincoming request[39m
+    [35mreqId[39m: "req-2"
+    [35mreq[39m: {
+      "method": "GET",
+      "url": "/api/health",
+      "host": "127.0.0.1:3001",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 36944
+    }
+[2026-05-20 11:37:10.571 +0900] [32mINFO[39m (15096): [36mrequest completed[39m
+    [35mreqId[39m: "req-2"
+    [35mres[39m: {
+      "statusCode": 200
+    }
+    [35mresponseTime[39m: 0.9788000583648682
+[2026-05-20 11:37:33.407 +0900] [32mINFO[39m (15096): [36mincoming request[39m
+    [35mreqId[39m: "req-3"
+    [35mreq[39m: {
+      "method": "GET",
+      "url": "/api/auth/status",
+      "host": "127.0.0.1:3001",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 58931
+    }
+[2026-05-20 11:37:33.410 +0900] [32mINFO[39m (15096): [36mrequest completed[39m
+    [35mreqId[39m: "req-3"
+    [35mres[39m: {
+      "statusCode": 200
+    }
+    [35mresponseTime[39m: 2.0906999111175537
+[2026-05-20 11:37:34.381 +0900] [32mINFO[39m (15096): [36mincoming request[39m
+    [35mreqId[39m: "req-4"
+    [35mreq[39m: {
+      "method": "GET",
+      "url": "/api/health",
+      "host": "127.0.0.1:3001",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 58933
+    }
+[2026-05-20 11:37:34.382 +0900] [32mINFO[39m (15096): [36mrequest completed[39m
+    [35mreqId[39m: "req-4"
+    [35mres[39m: {
+      "statusCode": 200
+    }
+    [35mresponseTime[39m: 0.6883997917175293
+C:\Users\tomar\Documents\GitHub\ModernDBAdmin\apps\backend:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @modern-db-admin/backend@0.1.0 dev: `tsx watch src/server.ts`
+Exit status 1
+[dev] backend が終了しました (code 1)

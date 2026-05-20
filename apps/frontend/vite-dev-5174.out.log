@@ -1,0 +1,124 @@
+
+> modern-db-admin@0.1.0 dev C:\Users\tomar\Documents\GitHub\ModernDBAdmin
+> node scripts/dev.mjs
+
+[dev] shared build を起動します
+
+> @modern-db-admin/shared@0.1.0 build C:\Users\tomar\Documents\GitHub\ModernDBAdmin\packages\shared
+> tsup src/index.ts --format esm,cjs --dts --clean
+
+[34mCLI[39m Building entry: src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.5.1
+[34mCLI[39m Target: es2022
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[34mCJS[39m Build start
+[32mESM[39m [1mdist\index.js [22m[32m7.17 KB[39m
+[32mESM[39m ⚡️ Build success in 68ms
+[32mCJS[39m [1mdist\index.cjs [22m[32m10.86 KB[39m
+[32mCJS[39m ⚡️ Build success in 69ms
+[34mDTS[39m Build start
+[32mDTS[39m ⚡️ Build success in 1476ms
+[32mDTS[39m [1mdist\index.d.ts  [22m[32m17.88 KB[39m
+[32mDTS[39m [1mdist\index.d.cts [22m[32m17.88 KB[39m
+[dev] backend を起動します
+
+> @modern-db-admin/backend@0.1.0 dev C:\Users\tomar\Documents\GitHub\ModernDBAdmin\apps\backend
+> tsx watch src/server.ts
+
+[dev] バックエンドの準備ができました
+[dev] frontend を起動します
+
+> @modern-db-admin/frontend@0.1.0 dev C:\Users\tomar\Documents\GitHub\ModernDBAdmin\apps\frontend
+> vite
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v8.0.13[39m  [2mready in [0m[1m919[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2026-05-19 20:25:44.972 +0900] [31mERROR[39m (39636): [36mlisten EADDRINUSE: address already in use 0.0.0.0:3001[39m
+    err: {
+      "type": "Error",
+      "message": "listen EADDRINUSE: address already in use 0.0.0.0:3001",
+      "stack":
+          Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+              at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+              at listenInCluster (node:net:1997:12)
+              at node:net:2206:7
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+      "code": "EADDRINUSE",
+      "errno": -4091,
+      "syscall": "listen",
+      "address": "0.0.0.0",
+      "port": 3001
+    }
+20:31:01 [tsx] change in ./src\plugins\env.ts Rerunning...
+c[2026-05-19 20:31:06.111 +0900] [32mINFO[39m (29080): [36mServer listening at http://127.0.0.1:3001[39m
+[2026-05-19 20:31:06.112 +0900] [32mINFO[39m (29080): [36mServer listening at http://172.26.16.1:3001[39m
+[2026-05-19 20:31:06.112 +0900] [32mINFO[39m (29080): [36mServer listening at http://192.168.0.8:3001[39m
+20:31:23 [tsx] change in ./src\routes\auth.routes.ts Restarting...
+c20:31:30 [tsx] change in ./src\server.ts Rerunning...
+c20:32:20 [tsx] change in ./src\services\query-safety-service.ts Rerunning...
+c20:32:26 [tsx] change in ./src\services\query-safety-service.ts Rerunning...
+c20:33:04 [tsx] change in ./src\routes\auth.routes.ts Rerunning...
+c[2026-05-19 20:33:09.178 +0900] [31mERROR[39m (27928): [36mlisten EADDRINUSE: address already in use 0.0.0.0:3001[39m
+    err: {
+      "type": "Error",
+      "message": "listen EADDRINUSE: address already in use 0.0.0.0:3001",
+      "stack":
+          Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+              at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+              at listenInCluster (node:net:1997:12)
+              at node:net:2206:7
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+      "code": "EADDRINUSE",
+      "errno": -4091,
+      "syscall": "listen",
+      "address": "0.0.0.0",
+      "port": 3001
+    }
+20:33:52 [tsx] change in ./..\..\packages\shared\dist\index.js Rerunning...
+c[2026-05-19 20:33:55.740 +0900] [32mINFO[39m (42672): [36mServer listening at http://127.0.0.1:3001[39m
+[2026-05-19 20:33:55.741 +0900] [32mINFO[39m (42672): [36mServer listening at http://172.26.16.1:3001[39m
+[2026-05-19 20:33:55.741 +0900] [32mINFO[39m (42672): [36mServer listening at http://192.168.0.8:3001[39m
+20:36:21 [tsx] change in ./..\..\packages\shared\dist\index.js Restarting...
+c[2026-05-19 20:36:25.623 +0900] [31mERROR[39m (29912): [36mlisten EADDRINUSE: address already in use 0.0.0.0:3001[39m
+    err: {
+      "type": "Error",
+      "message": "listen EADDRINUSE: address already in use 0.0.0.0:3001",
+      "stack":
+          Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+              at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+              at listenInCluster (node:net:1997:12)
+              at node:net:2206:7
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+      "code": "EADDRINUSE",
+      "errno": -4091,
+      "syscall": "listen",
+      "address": "0.0.0.0",
+      "port": 3001
+    }
+20:38:43 [tsx] unlink in ./..\..\packages\shared\dist\index.js Rerunning...
+c20:38:44 [tsx] change in ./..\..\packages\shared\dist\index.js Restarting...
+c[2026-05-19 20:38:51.446 +0900] [31mERROR[39m (14176): [36mlisten EADDRINUSE: address already in use 0.0.0.0:3001[39m
+    err: {
+      "type": "Error",
+      "message": "listen EADDRINUSE: address already in use 0.0.0.0:3001",
+      "stack":
+          Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+              at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+              at listenInCluster (node:net:1997:12)
+              at node:net:2206:7
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+      "code": "EADDRINUSE",
+      "errno": -4091,
+      "syscall": "listen",
+      "address": "0.0.0.0",
+      "port": 3001
+    }
+ ELIFECYCLE  Command failed with exit code 1073807364.
