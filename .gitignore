@@ -3,7 +3,6 @@ dist
 .vite
 .turbo
 coverage
-pnpm-lock.yaml
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
