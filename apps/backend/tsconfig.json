@@ -1,9 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "./src",
+    "baseUrl": ".",
+    "rootDir": "../..",
     "outDir": "./dist",
     "lib": ["ES2022"],
+    "paths": {
+      "@modern-db-admin/shared": ["../../packages/shared/src/index.ts"],
+      "@modern-db-admin/shared/*": ["../../packages/shared/src/*"]
+    },
     "types": ["node"]
   },
   "include": ["src"]

@@ -4,7 +4,9 @@
     "baseUrl": "./src",
     "jsx": "react-jsx",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@modern-db-admin/shared": ["../../../packages/shared/src/index.ts"],
+      "@modern-db-admin/shared/*": ["../../../packages/shared/src/*"]
     },
     "types": ["vite/client"]
   },
